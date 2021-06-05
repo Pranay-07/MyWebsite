@@ -1,11 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-  <div class="container-fluid">
-      <div class="spacer"></div>
-      <a mat-button routerLink="AboutMe">About Me</a>
-      <a mat-button routerLink="ContactMe">Contact</a>
-      <a mat-button routerLink="AllProjects">All Projects</a>
-      <a mat-button routerLink="Blogs">Blogs</a>
+<nav class="navbar navbar-expand-lg" style="background-color:#333333">
+  <div>
+      <button mat-button style="background-color: #333333;padding:2px"><a style ="color:white" routerLink="AboutMe">About Me</a></button>
+      <button mat-button style="background-color: #333333;padding:2px"><a style ="color:white" routerLink="ContactMe">Contact</a></button>
+      <button mat-button style="background-color: #333333;padding:2px"><a style ="color:white" routerLink="AllProjects">All Projects</a></button>
+      <button mat-button style="background-color: #333333;padding:2px;"><a style ="color:white" routerLink="Blogs">Blogs</a></button>
   </div>
 </nav>
-<app-colousel></app-colousel>
+<app-aboutme style="color:white"></app-aboutme>
 <router-outlet></router-outlet>
