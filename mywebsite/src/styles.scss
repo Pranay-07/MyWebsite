@@ -1,2 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+body{
+    background-color: gray;
+    color: white;
+    font-family: "centrale-sans-book";
+    margin: 0px;
+    padding: 0px;
+}
+::-webkit-scrollbar{
+    height:8px;
+  }
+  ::-webkit-scrollbar-track{
+    background: scroll;
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color:rgba(214,214,214,0.5);
+    border-radius: 15px;
+  }

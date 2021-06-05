@@ -1,0 +1,30 @@
+// .corousal{
+//     height:200px;
+// }
+// .colousel-inner .item.left.active{
+//     transform:translateX(-33%);
+// }
+// .colousel-inner .item.prev{
+//     transform:translateX(-33%);
+// }
+// .colousel-inner .item.next{
+//     transform:translateX(33%);
+// }
+// .colousel-inner .item.right.active{
+//     transform:translateX(33%);
+// }
+.img-container{
+    display:flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.img{
+    width:50%
+}
+.row{
+    display:flex;
+}
+.column{
+    flex:16.6%;
+    padding:5px;
+}
