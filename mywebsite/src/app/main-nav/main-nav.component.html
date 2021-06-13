@@ -1,0 +1,39 @@
+<mat-sidenav-container class="sidenav-container" style="background-color: #1f1f1f;color: white;">
+  <mat-sidenav style="background-color: #1f1f1f;color: white;" #drawer class="sidenav" fixedInViewport=false [ngClass]="{hidden:!(isHandset$ | async)!.valueOf}"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar><img src="../../assets/MyImage.jpg" style="width: 45px;height: 45px;border-radius: 50%;margin-right: 5px;">Pranay</mat-toolbar>
+    <hr>
+    <mat-nav-list style="background-color: #1f1f1f;color:white">
+      <a style="color:white" mat-list-item routerLink="/AboutMe">About Me</a>
+      <a style="color:white" mat-list-item routerLink="/ContactMe">Contact</a>
+      <a style="color:white" mat-list-item routerLink="/AllProjects">Projects</a>
+      <a style="color:white" mat-list-item routerLink="/AllProjects">Blogs</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar style="background-color: #333333;color: white;">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Portfolio</span>
+      <span class="spacer" style="flex:1 1 auto">
+      <!-- <button [ngClass]="{'dark': this.clicked=='Aboutme','light':this.clicked!='Aboutme'}" mat-button style="padding:2px"><a style ="color:white" routerLink="AboutMe" (click)=onclickAboutMe()>About Me</a></button>
+      <button [ngClass]="{'dark': this.clicked=='Contact','light':this.clicked!='Contact'}" mat-button style="padding:2px"><a style ="color:white" routerLink="ContactMe" (click)=onclickContact()>Contact</a></button>
+      <button [ngClass]="{'dark': this.clicked=='AllProjects','light':this.clicked!='AllProjects'}" mat-button style="padding:2px"><a style ="color:white" routerLink="AllProjects" (click)=onclickAllProjects()>All Projects</a></button>
+      <button [ngClass]="{'dark': this.clicked=='Blogs','light':this.clicked!='Blogs'}" mat-button style="padding:2px;"><a style ="color:white" routerLink="Blogs" (click)=onclickBlogs()>Blogs</a></button> -->
+      <a style="margin-left: 25px;font-size: 15px;" href="/AboutMe">AboutMe</a>
+      <a style="margin-left: 10px;font-size: 15px;" routerLink="/ContactMe">Contact  </a>
+      <a style="margin-left: 10px;font-size: 15px;" routerLink="/AllProjects">All Projects</a>
+      <a style="margin-left: 10px;font-size: 15px;" routerLink="/AllProjects">Blogs</a>
+      </span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

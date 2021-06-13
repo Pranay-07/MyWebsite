@@ -19,6 +19,10 @@ import { AngularProjectsComponentComponent } from './angular-projects-component/
 import { ReactProjectComponent } from './react-project/react-project.component';
 import { IotProjectsComponent } from './iot-projects/iot-projects.component';
 import { CppprojectsComponent } from './cppprojects/cppprojects.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -31,7 +35,8 @@ import { CppprojectsComponent } from './cppprojects/cppprojects.component';
     AngularProjectsComponentComponent,
     ReactProjectComponent,
     IotProjectsComponent,
-    CppprojectsComponent
+    CppprojectsComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +50,10 @@ import { CppprojectsComponent } from './cppprojects/cppprojects.component';
     MatToolbarModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LayoutModule,
+    MatSidenavModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent],

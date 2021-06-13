@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 body{
     background-color: gray;
     color: white;
@@ -7,8 +8,12 @@ body{
     margin: 0px;
     padding: 0px;
 }
+html,body{
+  height:100%
+}
 ::-webkit-scrollbar{
     height:8px;
+    width: 2px;
   }
   ::-webkit-scrollbar-track{
     background: scroll;
@@ -19,4 +24,3 @@ body{
     border-radius: 15px;
   }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

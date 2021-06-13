@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mywebsite';
+  clicked="Aboutme"
+  onclickAboutMe(){
+    this.clicked="Aboutme"
+  }
+  onclickContact(){
+    this.clicked="Contact"
+    console.log(true)
+  }
+  onclickAllProjects(){
+    this.clicked="AllProjects"
+  }
+  onclickBlogs(){
+    this.clicked="Blogs"
+  }
 }

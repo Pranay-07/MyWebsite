@@ -1,9 +1,11 @@
-<nav class="navbar navbar-expand-lg" style="background-color:#333333">
+<app-main-nav>
+</app-main-nav>
+<!-- <nav class="navbar navbar-expand-lg" style="background-color:#333333">
   <div>
-      <button mat-button style="background-color: #333333;padding:2px"><a style ="color:white" routerLink="AboutMe">About Me</a></button>
-      <button mat-button style="background-color: #333333;padding:2px"><a style ="color:white" routerLink="ContactMe">Contact</a></button>
-      <button mat-button style="background-color: #333333;padding:2px"><a style ="color:white" routerLink="AllProjects">All Projects</a></button>
-      <button mat-button style="background-color: #333333;padding:2px;"><a style ="color:white" routerLink="Blogs">Blogs</a></button>
+      <button [ngClass]="{'dark': this.clicked=='Aboutme','light':this.clicked!='Aboutme'}" mat-button style="padding:2px"><a style ="color:white" routerLink="AboutMe" (click)=onclickAboutMe()>About Me</a></button>
+      <button [ngClass]="{'dark': this.clicked=='Contact','light':this.clicked!='Contact'}" mat-button style="padding:2px"><a style ="color:white" routerLink="ContactMe" (click)=onclickContact()>Contact</a></button>
+      <button [ngClass]="{'dark': this.clicked=='AllProjects','light':this.clicked!='AllProjects'}" mat-button style="padding:2px"><a style ="color:white" routerLink="AllProjects" (click)=onclickAllProjects()>All Projects</a></button>
+      <button [ngClass]="{'dark': this.clicked=='Blogs','light':this.clicked!='Blogs'}" mat-button style="padding:2px;"><a style ="color:white" routerLink="Blogs" (click)=onclickBlogs()>Blogs</a></button>
   </div>
-</nav>
-<router-outlet></router-outlet>
+</nav> -->
+<!-- <router-outlet></router-outlet> -->
