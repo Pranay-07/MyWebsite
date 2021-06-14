@@ -1,29 +1,32 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { HttpService } from '../http.service';
+import '../../assets/smtp.js'
+declare let Email: any;
+
 @Component({
   selector: 'app-contact-me',
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.scss']
 })
 export class ContactMeComponent implements OnInit {
-  
+
   @ViewChild('emailFormControl')
   emailFormControl!: ElementRef;
 
   @ViewChild('firstNameFormControl')
   firstNameFormControl!: ElementRef;
-  
+
   @ViewChild('secondNameFormControl')
   secondNameFormControl!: ElementRef;
-  
+
   @ViewChild('contactFormControl')
   contactFormControl!: ElementRef;
-  
+
   @ViewChild('subjectFormControl')
   subjectFormControl!: ElementRef;
-  
-  constructor(public http:HttpService) { }
+
+  constructor(public http: HttpService) { }
 
   ngOnInit(): void {
   }
@@ -38,22 +41,33 @@ export class ContactMeComponent implements OnInit {
   }
   register() {
     let user = {
-      firstName: this.firstNameFormControl?.nativeElement.value,
-      lastName: this.secondNameFormControl.nativeElement.value,
-      email: this.emailFormControl.nativeElement.value,
-      Contact:this.contactFormControl.nativeElement.value,
-      Subject :this.subjectFormControl.nativeElement.value
+      
     }
-    this.http.sendEmail("/sendmail", user).subscribe( data => {
-      let res:any = data; 
-      console.log(
-      `${user.firstName} is successfully register and mail has been sent and the message id is ${res.messageId}`
-      );
-    },
-    err => {
-      console.log(err);
-    },() => {
-    })
+
   }
-  
+  sendMail() {
+      var firstName = this.firstNameFormControl?.nativeElement.value;
+      var lastName = this.secondNameFormControl.nativeElement.value;
+      var email =  this.emailFormControl.nativeElement.value;
+      var Contact =  this.contactFormControl.nativeElement.value;
+      var Subject= this.subjectFormControl.nativeElement.value;
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "mailfromportfolio07@gmail.com",
+      Password: "9C79261AF93C7AE6D4AE9F2416893DCBC45A",
+      Port: 2525,
+      To: 'pranay071196@gmail.com',
+      From: "mailfromportfolio07@gmail.com",
+      Subject: this.subjectFormControl.nativeElement.value,
+      Body: "Hi this is "+firstName+ " "+ lastName + ". I wanted to connect with you. My mail id is - "+email
+    }).then(
+      (message:string) =>{
+        console.log(message)
+        if(message=='OK') alert(message)
+        else alert('There is an error sending mail')
+      }
+    );
+    window.location.reload();
+  }
+
 }

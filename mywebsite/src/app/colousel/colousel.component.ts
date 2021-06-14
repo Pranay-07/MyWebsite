@@ -10,7 +10,6 @@ export class ColouselComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(true)
     $('#carousel').carousel();
   }
 

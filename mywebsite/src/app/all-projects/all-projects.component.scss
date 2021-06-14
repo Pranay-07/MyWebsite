@@ -11,3 +11,22 @@
     top:29%;
     margin-left: 10px;
 }
+.content {
+    padding: 16px;
+}
+
+.content > mat-card {
+    width: 200px;
+}
+
+.flexdesign{
+    display:flex;
+  }
+
+@media(max-width:700px){
+    .flexdesign{
+      display: inline-block;
+    }
+  }
+
+ 
