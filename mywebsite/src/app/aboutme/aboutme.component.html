@@ -1,7 +1,8 @@
-<div style="color:white"><img style="height:20%; width:100%" src="../../assets/background.jpg">
+<div style="color:white"><img style="width:100%" class="Background" src="../../assets/background.jpg">
 <div class="Title">Professional Portfolio</div>
 <div class="SmallTitle">Thanks for checking out my portfolio website!</div>
 <div class="MyIntro" style="box-shadow: 5px 5px 5px #444444;">
+    <!-- <img src="../../assets/Banner.png" style="width: 100%;"> -->
     <div style="display: flex;justify-content: center;">
         <img class="MyProfile" src="../../assets/MyImage.jpg">
     </div>
@@ -12,9 +13,8 @@
         <div style="font-size: 100%;margin-top: 10px;">(Software Developer)</div>
     </div>
     <div style="font-size: 100% ;margin-left: 20px;">Hi! I am a software developer and this is the little corner in
-        internet where you can know about me.
-        I have 2+ years of experience in full stack development with technologies like C# , angular and React
-        I look forward to learn and explore more in the field</div>
+        internet where you can know about me. I have 2+ years of experience in full stack development with technologies like C# , angular and React.I have experience in building microservices with the domain driven design.
+        I look forward to learn and explore more in the field.</div>
     <div style="display: flex;text-align: center;justify-content: center; ">
         <button (click)="toggle()" style="background-color: #1f1f1f;margin-top: 10px;" mat-button>Visit my public
             profile</button>
@@ -41,50 +41,53 @@
     </div>
 </div>
 
+
 <div class="MyIntro" style="padding: 0px;margin-bottom: 15px;box-shadow: 5px 5px 5px #444444;">
-    <div style="background-color: #1f1f1f;padding: 15px;margin-bottom: 10px;">Experience</div>
-    <div style="display: flex;padding-left: 5px;">
-        <div style="display: flex;padding-left: 5px;">
-            <img style="width: 75px;height:75px;padding:5px" src="../../assets/Philips.jpg">
-            <div>
-            <div style="padding-left: 10px;font-weight: 500;font-size: 15px;">Philips Healthcare</div>
-            <div style="padding-left: 10px;">Jun(2019) - Current</div>
-            <div style="padding-left: 10px;margin-bottom: 15px;">Software Engineer</div>
-        </div>
-        </div>
-    </div>
-    <div style="display: flex;padding-left: 5px;">
-        <div style="display: flex;padding-left: 5px;">
-            <img style="width: 75px;height:75px;;padding:5px" src="../../assets/Philips.jpg">
-            <div>
-            <div style="padding-left: 10px;font-weight: 500;font-size: 15px;">Philips Healthcare</div>
-            <div style="padding-left: 10px;">Jan(2019) -Jun(2019)</div>
-            <div style="padding-left: 10px;">Software Engineer Intern</div>
-        </div>
-        </div>
-    </div>
-</div>
-<div class="MyIntro" style="padding: 0px;margin-bottom: 15px;box-shadow: 5px 5px 5px #444444;">
-    <div style="background-color: #1f1f1f;padding: 15px;margin-bottom: 10px;">Technologies</div>
+    <div style="background-color: #1f1f1f;padding: 15px;">Technologies</div>
     <app-colousel style="padding:10px"></app-colousel>
 </div>
-<div class="MyIntro" style="padding: 0px;margin-bottom: 15px; box-shadow: 5px 5px 5px #444444;">
-    <div style="background-color: #1f1f1f;padding: 15px;margin-bottom: 10px;">Education qualification</div>
-    <div style="display: flex;padding-left: 5px;">
-        <img style="width: 75px;height:75px;" src="../../assets/NIELogo.png">
-        <div style="display: inline-block;">
-            <div style="padding-left: 10px;">The National Institute of Engineering, Mysore (2015-2019)</div>
-            <div style="padding-left: 10px;">Electronics and Communication</div>
-            <div style="padding-left: 10px;">CGPA-8.43</div>
+<div class="exp">
+    <div class="MyIntro" style="padding: 0px;margin-bottom: 15px;box-shadow: 5px 5px 5px #444444;margin-right:35px;min-height: 300px;">
+        <div style="background-color: #1f1f1f;padding: 15px;margin-bottom: 10px;">Experience</div>
+        <div style="display: flex;padding-left: 5px;">
+            <div style="display: flex;padding-left: 5px;">
+                <img style="width: 75px;height:75px;padding:5px" src="../../assets/Philips.jpg">
+                <div>
+                <div style="padding-left: 10px;font-weight: 500;font-size: 15px;">Philips Innovation Campus</div>
+                <div style="padding-left: 10px;">Jun(2019) - Current</div>
+                <div style="padding-left: 10px;margin-bottom: 15px;">Software Engineer</div>
+            </div>
+            </div>
+        </div>
+        <div style="display: flex;padding-left: 5px;text-align: center;">
+            <div style="display: flex;padding-left: 5px;">
+                <img style="width: 75px;height:75px;;padding:5px" src="../../assets/Philips.jpg">
+                <div>
+                <div style="padding-left: 10px;font-weight: 500;font-size: 15px;">Philips Innovation campus</div>
+                <div style="padding-left: 10px;">Jan(2019) -Jun(2019)</div>
+                <div style="padding-left: 10px;">Software Engineer Intern</div>
+            </div>
+            </div>
         </div>
     </div>
-    <div style="display: flex;padding-left: 5px;margin-top: 15px;margin-bottom: 15px;">
-        <img style="width: 75px;height:75px;" src="../../assets/SchoolLogo.jpg">
-        <div style="display: inline-block;">
-            <div style="padding-left: 5px;">Denobili School, Dhanbad (2013-2015)</div>
+    <div class="MyIntro" style="padding: 0px;margin-bottom: 35px; box-shadow: 5px 5px 5px #444444;margin-right:35px;min-height: 300px;">
+        <div style="background-color: #1f1f1f;padding: 15px;margin-bottom: 10px;">Education qualification</div>
+        <div style="display: flex;padding-left: 5px;">
+            <img style="width: 75px;height:75px;" src="../../assets/NIELogo.png">
+            <div style="display: inline-block;">
+                <div style="padding-left: 10px;">The National Institute of Engineering, Mysore (2015-2019)</div>
+                <div style="padding-left: 10px;">Electronics and Communication</div>
+                <div style="padding-left: 10px;">CGPA-8.43</div>
+            </div>
         </div>
-    </div>
-</div>
+        <div style="display: flex;padding-left: 5px;margin-top: 15px;margin-bottom: 15px;">
+            <img style="width: 75px;height:75px;" src="../../assets/SchoolLogo.jpg">
+            <div style="display: inline-block;">
+                <div style="padding-left: 5px;">Denobili School, Dhanbad (2013-2015)</div>
+            </div>
+        </div>
+    </div></div>
+
 <div style="background-color: #333333;width: auto;height: 200px">
     <div style="margin-top: 25px;">
     </div>

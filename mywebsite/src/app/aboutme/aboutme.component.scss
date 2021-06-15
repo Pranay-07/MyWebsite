@@ -51,4 +51,21 @@ img.MyProfile {
      padding: 10px;
      box-shadow: 5px 5px 5px #444444;
   }
-  
+  .Background{
+    height:400px;
+}
+.exp{
+    margin-top: 25px;
+    display: flex;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    }
+@media(max-width:700px){
+    .Background{
+      height:150px;
+    }
+    .exp{
+        display: inline-block;;
+        }
+  }
